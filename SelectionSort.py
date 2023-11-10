@@ -1,4 +1,4 @@
-def selectionSort(ary):  #q배열을 하나만 사용해서 선택정렬
+def selectionSort(ary):  #배열을 하나만 사용해서 선택정렬
   n=len(ary)
   for i in range(n-1):
     minIdx = i
