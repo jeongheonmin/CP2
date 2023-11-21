@@ -73,7 +73,7 @@ class BinarySearchTree():
           tmp_parent = current
           tmp_current = current.right
 
-          while tmp_current.left != None:
+          while tmp_current.left != None: # 오른쪽에서 가장 작은 값 
             tmp_parent = tmp_current
             tmp_current = tmp_current.left
           current.data = tmp_current.data
@@ -82,7 +82,6 @@ class BinarySearchTree():
             tmp_parent.left = tmp_current.right
           else:
             tmp_parent.right = tmp_current.right
-          del(current)
 
 
         print(del_data,"이(가) 삭제됨")
@@ -137,13 +136,13 @@ for i in nameAry:
   bst.insert(i)
 
 
-postorder(root)
+preorder(root)
 print('끝')
 bst.delete(8)
-postorder(root)
-print()
+preorder(root)
+print('끝')
 bst.delete(9)
-inorder(root)
+preorder(root)
 print('끝')
 
 
