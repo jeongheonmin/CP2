@@ -1,8 +1,16 @@
 #stack을 이용한 괄호의 매칭 검사
-#여는 괄호는 push, 닫는 괄호는 pop 해주는 방식 
+import sys
 str=input('괄호 입력 :')
 s=[None for _ in range(len(str))]
 top=-1
+
+def isStackEmpty():
+  global SIZE, stack, top
+  if(top==-1):
+    return True
+  else:
+    return False
+
 
 def pop():
   global SIZE, s, top
@@ -16,7 +24,6 @@ def pop():
 
 def push(data):
   global SIZE,s,top
-  
   if(isStackFull()):
     print('스택이 꽉 찼습니다.')
     return
@@ -55,8 +62,8 @@ for p in str:
     else:
       print('괄호가 올바르지 않음')
       break
-print(s)
-if top==-1:
+
+if s[top]==None:
   print('True')
 else:
   print('False')
